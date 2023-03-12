@@ -19,7 +19,7 @@ passport.use(
               });
         } else {
         //   const passHash = bcrypt.hashSync(password, salt);
-          user({ user_id, password,firstname:"",lastname:"",userIdentification:req.body.userIdentification }).save((err, data) => {
+          user({ user_id, password,firstname:"",lastname:"",userIdentification:req.body.userIdentification,first_tour:false,profile_pic:"" }).save((err, data) => {
             return done(null, data);
           });
         }
